@@ -29,6 +29,7 @@ Note that spectrum only modifies the background colour for inactive tabs to crea
 
 <details>
 <summary>Example Colours Config</summary>
+
 ``` lua
 local config = wz.config_builder()
 local hex_white = '#ffffff'
