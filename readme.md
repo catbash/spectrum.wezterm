@@ -20,12 +20,14 @@ local spectrum_args = {
 spectrum.apply_to_config(config, spectrum_args)
 ```
 
-Note that spectrum only modifies the background colour for inactive tabs to create the step gradient. You will need to set the inactive tab fg and active tab bg and fg colours as usual.
+Note that spectrum only modifies the background colour for inactive tabs to create the step gradient. You will need to set the inactive tab fg and active tab bg and fg colours as usual. 
 
 <details>
 <summary>Example Colours Config</summary>
 
+
 ``` lua
+local wz = require("wezterm")
 local config = wz.config_builder()
 local hex_white = '#ffffff'
 config.colors = {
