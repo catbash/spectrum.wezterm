@@ -4,7 +4,7 @@
 
 A step-gradient effect for the wezterm tab bar
 
-### 🔧
+### ⚙️
 
 Add the following to your `wezterm.lua` file:
 ``` lua

@@ -7,7 +7,7 @@ local function spectrum_step(opacity, rgb)
 		opacity = tostring(1)
 	end
 	if rgb == nil then
-		return "rgba(0,0,0,1)"
+		return "rgba(255,255,255,1)"
 	end
 	return "rgba("
 		.. tostring(rgb.r)
@@ -33,8 +33,8 @@ spectrum.apply_to_config = function(c, args)
 	local default_colors = {
 		spectrum = {
 			r = 255,
-			g = 0,
-			b = 0,
+			g = 255,
+			b = 255,
 		},
 	}
 
