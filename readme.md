@@ -2,7 +2,7 @@
 
 ![demo.gif](https://github.com/catbash/spectrum.wezterm/blob/main/img/demo.gif?raw=true)
 
-A step-gradient effect for the wezterm tab bar
+A step-gradient effect for the [wezterm](https://github.com/wez/wezterm) tab bar
 
 ### ⚙️
 
