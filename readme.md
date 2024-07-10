@@ -10,11 +10,6 @@ Add the following to your `wezterm.lua` file:
 ``` lua
 local wz = require("wezterm")
 local spectrum = wz.plugin.require("https://github.com/catbash/spectrum.wezterm")
-spectrum.apply_to_config(config)
-```
-
-You can specify a custom gradient base colour in `rgb` format:
-``` lua
 local spectrum_args = {
         spectrum = {
                 r = 137,
