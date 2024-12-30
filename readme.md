@@ -10,50 +10,38 @@ Add the following to your `wezterm.lua` file:
 ``` lua
 local wz = require("wezterm")
 local spectrum = wz.plugin.require("https://github.com/catbash/spectrum.wezterm")
-local spectrum_args = {
-        spectrum = {
-                r = 137,
-                g = 180,
-                b = 250,
-        },
+local opts = {
+  bg = {
+    r = 137,
+    g = 180,
+    b = 250,
+  },
+  fg = {
+    inactive = '#ffffff',
+    active = '#888888',
+  },
 }
-spectrum.apply_to_config(config, spectrum_args)
+spectrum.apply_to_config(config, opts)
 ```
 
-Note that spectrum only modifies the background colour for inactive tabs to create the step gradient. You will need to set the inactive tab fg and active tab bg and fg colours as usual. 
+Spectrum will automatically attempt to apply the resolved palette's `tab_bar.inactive_tab.fg_color` and `tab_bar.active_tab.fg_color` settings if available, or you can set them using `opts.fg.inactive` and `opts.fg.active` as shown in the example. If both are set, the resolved palette will override the local opts.
 
 <details>
 <summary>Example Colours Config</summary>
-
 
 ``` lua
 local wz = require("wezterm")
 local config = wz.config_builder()
 local hex_white = '#ffffff'
 config.colors = {
-	tab_bar = {
-		background = "transparent",
-		active_tab = {
-			bg_color = "rgb(137,180,250)",
-			fg_color = hex_white,
-		},
-		inactive_tab = {
-			bg_color = "transparent",
-			fg_color = hex_white,
-		},
-		inactive_tab_hover = {
-			bg_color = "transparent",
-			fg_color = hex_white,
-		},
-		new_tab = {
-			bg_color = "transparent",
-			fg_color = hex_white,
-		},
-		new_tab_hover = {
-			bg_color = "transparent",
-			fg_color = hex_white,
-		},
-	},
+    tab_bar = {
+        active_tab = {
+            fg_color = hex_white,
+        },
+        inactive_tab = {
+            fg_color = hex_white,
+        },
+    },
 }
 ```
 </details>
