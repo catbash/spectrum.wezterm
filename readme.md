@@ -37,9 +37,11 @@ config.colors = {
     tab_bar = {
         active_tab = {
             fg_color = hex_white,
+            -- other settings ...
         },
         inactive_tab = {
             fg_color = hex_white,
+            -- other settings ...
         },
     },
 }
